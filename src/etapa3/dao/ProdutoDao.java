@@ -62,7 +62,7 @@ public class ProdutoDao {
                         produto.setVolumetria(rs.getInt("volumetria"));
                         produto.setOrigem(rs.getString("origem"));
                         produto.setValorUnitario(rs.getDouble("valorUnitario"));
-                        produto.setInformacoesAdicionais("informacoesAdicionais");
+                        produto.setInformacoesAdicionais(rs.getString("informacoesAdicionais"));
 
                         listaProduto.add(produto);
                             
