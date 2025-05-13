@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="2">
+        <file>
+            <url>src/etapa3/conexao/Conexao.java</url>
+            <bookmark id="2">
+                <name/>
+                <line>39</line>
+                <key/>
+            </bookmark>
+        </file>
         <file>
             <url>src/etapa3/dao/ProdutoDao.java</url>
             <bookmark id="1">
@@ -12,7 +20,13 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Ignored/%5BJava%5D/Etapa%203/Etapa3/src/etapa3/dao/ClienteDao.java</file>
+            <file>file:/H:/Outros%20computadores/The%20One%20and%20Only%202%20%20Electric%20Boogaloo/Internet%20Explorer/Curso/Java/Etapa3/src/etapa3/dao/ClienteDao.java</file>
+            <file>file:/H:/Outros%20computadores/The%20One%20and%20Only%202%20%20Electric%20Boogaloo/Internet%20Explorer/Curso/Java/Etapa3/src/etapa3/dao/VendaDao.java</file>
+            <file>file:/H:/Outros%20computadores/The%20One%20and%20Only%202%20%20Electric%20Boogaloo/Internet%20Explorer/Curso/Java/Etapa3/src/etapa3/conexao/Conexao.java</file>
+            <file>file:/H:/Outros%20computadores/The%20One%20and%20Only%202%20%20Electric%20Boogaloo/Internet%20Explorer/Curso/Java/Etapa3/src/etapa3/dao/LoginDao.java</file>
+            <file>file:/H:/Outros%20computadores/The%20One%20and%20Only%202%20%20Electric%20Boogaloo/Internet%20Explorer/Curso/Java/Etapa3/src/etapa3/dao/FornecedorDao.java</file>
+            <file>file:/H:/Outros%20computadores/The%20One%20and%20Only%202%20%20Electric%20Boogaloo/Internet%20Explorer/Curso/Java/Etapa3/src/etapa3/beans/Cliente.java</file>
+            <file>file:/H:/Outros%20computadores/The%20One%20and%20Only%202%20%20Electric%20Boogaloo/Internet%20Explorer/Curso/Java/Etapa3/src/etapa3/dao/ProdutoDao.java</file>
         </group>
     </open-files>
 </project-private>

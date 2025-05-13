@@ -19,22 +19,6 @@ import java.sql.SQLException;
  */
 public class LoginDao {
     
-    public String criptografarSenha(String senha) {
-        try {
-            MessageDigest md = MessageDigest.getInstance("MD5");
-            md.update(senha.getBytes());
-            byte[] digest = md.digest();
-            StringBuilder sb = new StringBuilder();
-            for (byte b : digest) {
-                sb.append(String.format("%02x", b));
-            }
-            return sb.toString();
-        } catch (NoSuchAlgorithmException e) {
-            throw new RuntimeException("Erro ao criptografar a senha", e);
-        }
-    
-}
-    
     public void inserir(Login login){
                                 
                     String sql = "INSERT INTO login(nome, login, senha) VALUES (?, ?, ?)";
