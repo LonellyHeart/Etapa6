@@ -8,6 +8,7 @@ import etapa3.beans.Venda;
 import etapa3.conexao.Conexao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 /**
  *
@@ -35,8 +36,8 @@ public class VendaDao {
 
                         
                         
-                    } catch (Exception e) {
-                        System.out.println("Erro ao inserir nova venda: " + e.getMessage());
+                    }  catch (SQLException e) {
+                            throw new RuntimeException("Erro ao inserir uma nova venda: " + e.getMessage(), e);
                     }
                     
                 }

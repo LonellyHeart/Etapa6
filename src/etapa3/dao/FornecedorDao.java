@@ -9,6 +9,7 @@ import etapa3.conexao.Conexao;
 import java.sql.PreparedStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,8 +33,8 @@ public class FornecedorDao {
             stmt.setString(5, fornecedor.getInformacoesAdicionais());
             stmt.execute();
 
-        } catch (Exception e) {
-            System.out.println("Erro ao inserir fornecedor: " + e.getMessage());
+        } catch (SQLException e) {
+            throw new RuntimeException("Erro ao inserir fornecedor: " + e.getMessage(), e);
         }
 
     }
@@ -64,8 +65,8 @@ public class FornecedorDao {
 
             return listaFornecedor;
 
-        } catch (Exception e) {
-            return null;
+        } catch (SQLException e) {
+            throw new RuntimeException("Erro carregar fornecedores cadastrados " + e.getMessage(), e);
         }
     }
 

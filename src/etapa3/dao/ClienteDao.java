@@ -9,6 +9,7 @@ import etapa3.conexao.Conexao;
 import java.sql.PreparedStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,8 +29,8 @@ public class ClienteDao {
                         stmt.execute();  
                         
                         
-                    } catch (Exception e) {
-                        System.out.println("Erro ao inserir cliente: " + e.getMessage());
+                    }  catch (SQLException e) {
+                         throw new RuntimeException("Erro ao inserir cliente: " + e.getMessage(), e);
                     }
                     
                 }
@@ -60,8 +61,8 @@ public class ClienteDao {
 
                     return listaCliente;
                     
-                } catch (Exception e) {
-                    return null;
+                } catch (SQLException e) {
+                         throw new RuntimeException("Erro carregar clientes cadastrados: " + e.getMessage(), e);
                 }
            }
                
@@ -81,8 +82,8 @@ public class ClienteDao {
                         cliente.setEndereco(rs.getString("endereco"));
                         cliente.setEmail(rs.getString("email"));
                      }
-                } catch (Exception e) {
-                       return null;
+                } catch (SQLException e) {
+                         throw new RuntimeException("Erro ao carregar ComboBox: " + e.getMessage(), e);
                 }
     return cliente;
             }  

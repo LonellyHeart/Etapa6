@@ -10,6 +10,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 
 /**
@@ -46,8 +47,8 @@ public class LoginDao {
                         stmt.execute();  
                         
                         
-                    } catch (Exception e) {
-                        System.out.println("Erro ao inserir produto: " + e.getMessage());
+                    }  catch (SQLException e) {
+                          throw new RuntimeException("Erro ao inserir novo login de usuario: " + e.getMessage(), e);
                     }
     
     }

@@ -10,6 +10,7 @@ import etapa3.conexao.Conexao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,8 +35,8 @@ public class ProdutoDao {
                         stmt.execute();  
                         
                         
-                    } catch (Exception e) {
-                        System.out.println("Erro ao inserir produto: " + e.getMessage());
+                    }  catch (SQLException e) {
+                         throw new RuntimeException("Erro ao inserir produto: " + e.getMessage(), e);
                     }
                     
                 }
@@ -69,8 +70,8 @@ public class ProdutoDao {
 
                     return listaProduto;
                     
-                } catch (Exception e) {
-                    return null;
+                }  catch (SQLException e) {
+                        throw new RuntimeException("Erro ao carregar lista de produtos: " + e.getMessage(), e);
                 }
            }
 }
