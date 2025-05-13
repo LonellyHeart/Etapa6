@@ -13,7 +13,7 @@ import java.security.NoSuchAlgorithmException;
  */
 public class Criptografia {
 
-    public String criptografarSenha(String senha) {
+    public static String criptografarSenha(String senha) {
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");
             md.update(senha.getBytes());

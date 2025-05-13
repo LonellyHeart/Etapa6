@@ -4,6 +4,7 @@ import etapa3.beans.SessaoUsuario;
 import javax.swing.JOptionPane;
 import etapa3.conexao.Conexao;
 import etapa3.dao.LoginDao;
+import etapa3.util.Criptografia;
 import java.sql.PreparedStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -133,7 +134,7 @@ public class TelaLogin extends javax.swing.JFrame {
             String sql = "SELECT nome FROM Login WHERE login = ? AND senha = ?";
             PreparedStatement stmt = this.conn.prepareStatement(sql);
             stmt.setString(1, loginUsuario);
-            stmt.setString(2, loginDao.criptografarSenha(senhaUsuario));
+            stmt.setString(2, Criptografia.criptografarSenha(senhaUsuario));
             ResultSet rs = stmt.executeQuery();
 
             if (rs.next()) {
