@@ -6,8 +6,7 @@ package etapa3.dao;
 
 import etapa3.beans.Login;
 import etapa3.conexao.Conexao;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
+import etapa3.util.Criptografia;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -27,7 +26,7 @@ public class LoginDao {
                         PreparedStatement stmt = conn.prepareStatement(sql);
                         stmt.setString(1, login.getNome());
                         stmt.setString(2, login.getLogin());
-                        stmt.setString(3, criptografarSenha(login.getSenha()));
+                        stmt.setString(3, Criptografia.criptografarSenha(login.getSenha()));
                         stmt.execute();  
                         
                         

@@ -25,7 +25,7 @@ public class Conexao {
           Connection conn = null;
           try {
               Class.forName("com.mysql.cj.jdbc.Driver");
-              conn = DriverManager.getConnection("jdbc:mysql://localhost/etapa4", "root", "1234"); //Supersenha0112 ou 1234
+              conn = DriverManager.getConnection("jdbc:mysql://localhost/etapa4", "root", "Supersenha0112"); //Supersenha0112 ou 1234
               System.out.println("Conectou com o banco de dados!!!!");
           } catch (SQLException ex) {
               System.out.println("Erro: Não foi possivel se conectar no banco de dados!");
